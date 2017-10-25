@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <plugin name="LancamentoPlanilhaDeducao" label="Lancamento Planilha Deducao" plugin-version="1.0" ecidade-version="2.3.39" id-modulo="398">
+   <id id="LancamentoPlanilhaDeducao"> </id>
+   <files>
+
+    <!-- outro -->
+    <file name="LancamentoPlanilhaDeducao.xml"    path="/modification/xml/LancamentoPlanilhaDeducao.xml" />
+   </files>
+  </plugin>
+</manifest>    

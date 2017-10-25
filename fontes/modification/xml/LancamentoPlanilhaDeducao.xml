@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<modification>
+  <name>LancamentoPlanilhaDeducao</name>
+  <id>LancamentoPlanilhaDeducao</id>
+  <ecidade-version>2.3.39</ecidade-version>
+  
+  <file path='cai1_planilhalancamento001.php'>
+    <operation>
+      <search regex="true"><![CDATA[oReceita\.iReceitaPlanilha\s*=\s*\$F\('codigo_receitaplanilha'\);]]></search>
+      <add>
+        <![CDATA[
+
+  if ($F('estrutural').substr(0,1) == '9' && $F('k81_valor') > 0) {
+	  if (!confirm("Esta receita é de Dedução e o valor está positivo, deseja salvar mesmo assim?")) {
+		  return false;
+	  }	  
+  }
+
+  $1
+          ]]>
+      </add>
+    </operation>
+  </file> 
+
+</modification>
